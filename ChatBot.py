@@ -12,9 +12,8 @@ from langchain_community.vectorstores import FAISS
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_huggingface import HuggingFaceEmbeddings
 
-# os.environ['GROQ_API_KEY'] = os.getenv("GROQ_API_KEY")
-api = os.getenv('GROQ_API_KEY')
-os.environ['HUGGING_FACE'] = os.getenv('HUGGING_FACE')
+api = os.getenv('GROQ_API_KEY') ## Your Groq API Key
+os.environ['HUGGING_FACE'] = os.getenv('HUGGING_FACE') ## Your HuggingFace API Key
 llm = ChatGroq(model='Llama3-8b-8192', groq_api_key=api)
 
 prompt = ChatPromptTemplate.from_template(
