@@ -36,7 +36,7 @@ def context_vector_embedding():
 
 st.title("RAG Document ChatBot")
 user_promt = st.text_input("Enter your query: ")
-if st.button("ask"):
+if st.button("Embed"):
     context_vector_embedding()
     st.write("Your Database is ready")
 
